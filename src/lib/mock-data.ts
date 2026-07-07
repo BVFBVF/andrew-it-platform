@@ -1,5 +1,5 @@
 import { Candidate } from "@/lib/types";
-import { GRADE, FORMAT, READINESS_STATUS } from "./dictionaries";
+import { GRADE, FORMAT, READINESS_STATUS, PIPELINE_STAGE } from "./dictionaries";
 
 export const mockCandidates: Candidate[] = [
   {
@@ -107,3 +107,12 @@ export const mockCandidates: Candidate[] = [
     about: "Detail-oriented QA ensuring top-notch software quality.",
   }
 ];
+
+export const mockPipelineCandidates: import("./types").PipelineCandidate[] = mockCandidates.map((c, i) => {
+  const stages = Object.values(PIPELINE_STAGE);
+  return {
+    ...c,
+    pipelineStage: stages[i % stages.length],
+    lastUpdated: new Date(Date.now() - i * 1000 * 60 * 60 * 24).toISOString(),
+  };
+});

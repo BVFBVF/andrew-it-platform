@@ -2,15 +2,22 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Users, X } from "lucide-react";
+import { Users, Kanban, X } from "lucide-react";
 import { useAppStore } from "@/store/use-app-store";
 import { cn } from "@/lib/utils";
 
-const navItems = [{
+const navItems = [
+  {
     href: "/match",
     label: "Candidate Match",
     icon: Users,
-}];
+  },
+  {
+    href: "/pipeline",
+    label: "Pipeline",
+    icon: Kanban,
+  },
+];
 
 export function Sidebar() {
   const pathname = usePathname();

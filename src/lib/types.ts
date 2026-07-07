@@ -1,8 +1,10 @@
-import { GRADE, FORMAT, READINESS_STATUS } from "./dictionaries";
+import { GRADE, FORMAT, READINESS_STATUS, PIPELINE_STAGE } from "./dictionaries";
 
 export type Grade = (typeof GRADE)[keyof typeof GRADE];
 export type Format = (typeof FORMAT)[keyof typeof FORMAT];
 export type ReadinessStatus = (typeof READINESS_STATUS)[keyof typeof READINESS_STATUS];
+export type PipelineStage = (typeof PIPELINE_STAGE)[keyof typeof PIPELINE_STAGE];
+
 
 export type Candidate = {
   id: string;
@@ -16,4 +18,9 @@ export type Candidate = {
   readinessStatus: ReadinessStatus;
   avatarUrl?: string;
   about?: string;
+};
+
+export type PipelineCandidate = Candidate & {
+  pipelineStage: PipelineStage;
+  lastUpdated: string;
 };
