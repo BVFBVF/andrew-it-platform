@@ -41,7 +41,7 @@ export function CandidateCard({ candidate, copiedId, onCopyProfile }: CandidateC
       <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         <div className="space-y-1">
           <p className="text-xs text-neutral-500 font-medium uppercase tracking-wider">
-            Stack Match
+            Совпадение
           </p>
           <div className="flex items-center gap-2">
             <span
@@ -61,7 +61,7 @@ export function CandidateCard({ candidate, copiedId, onCopyProfile }: CandidateC
 
         <div className="space-y-1">
           <p className="text-xs text-neutral-500 font-medium uppercase tracking-wider">
-            Readiness Status
+            Статус готовности
           </p>
 
           <div className="flex items-center gap-1.5">
@@ -82,9 +82,9 @@ export function CandidateCard({ candidate, copiedId, onCopyProfile }: CandidateC
         </div>
 
         <div className="space-y-1">
-          <p className="text-xs text-neutral-500 font-medium uppercase tracking-wider">Rate</p>
+          <p className="text-xs text-neutral-500 font-medium uppercase tracking-wider">Ставка</p>
           <p className="text-sm font-medium text-neutral-300 mt-1">
-            ${candidate.rate} <span className="text-neutral-500">/hr</span>
+            ${candidate.rate} <span className="text-neutral-500">/час</span>
           </p>
         </div>
       </div>
@@ -103,12 +103,12 @@ export function CandidateCard({ candidate, copiedId, onCopyProfile }: CandidateC
           {copiedId === candidate.id ? (
             <>
               <CheckCircle2 className="w-4 h-4" />
-              Copied!
+              Скопировано!
             </>
           ) : (
             <>
               <Copy className="w-4 h-4" />
-              Offer to Client
+              Копировать
             </>
           )}
         </button>
