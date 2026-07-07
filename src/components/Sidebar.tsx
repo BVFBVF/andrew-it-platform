@@ -2,15 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Users, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useAppStore } from "@/store/use-app-store";
 import { cn } from "@/lib/utils";
-
-const navItems = [{
-    href: "/match",
-    label: "Candidate Match",
-    icon: Users,
-}];
+import { appConfig } from "@/config/app.config";
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -41,7 +36,7 @@ export function Sidebar() {
         </div>
 
         <nav className="p-4 space-y-2">
-          {navItems.map((item) => {
+          {appConfig.navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link

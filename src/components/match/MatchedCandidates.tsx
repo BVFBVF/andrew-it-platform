@@ -72,7 +72,7 @@ export function MatchedCandidates() {
   };
 
   return (
-    <section className="space-y-4 pb-12">
+    <section className="space-y-4 pb-12 pt-6">
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold text-neutral-100">
           Подходящие кандидаты ({filteredCandidates.length})
