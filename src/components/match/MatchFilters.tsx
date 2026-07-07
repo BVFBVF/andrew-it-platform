@@ -1,3 +1,5 @@
+"use client";
+
 import { Search, Briefcase, MapPin, DollarSign } from "lucide-react";
 import { useMatchStore } from "@/store/use-match-store";
 import { GRADE, FORMAT } from "@/lib/dictionaries";
