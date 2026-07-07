@@ -56,14 +56,14 @@ export function MatchedCandidates() {
 
   const handleCopyProfile = (candidate: Candidate & { stackMatch: number }) => {
     const profileText = `
-Name: ${candidate.name}
-Role: ${candidate.role} (${candidate.grade})
-Format: ${candidate.format}
-Rate: $${candidate.rate}/hr
-Skills: ${candidate.skills.join(", ")}
-Readiness: ${candidate.readinessStatus}
-Match: ${candidate.stackMatch}%
-About: ${candidate.about}
+Имя: ${candidate.name}
+Роль: ${candidate.role} (${candidate.grade})
+Формат: ${candidate.format}
+Ставка: $${candidate.rate}/час
+Навыки: ${candidate.skills.join(", ")}
+Готовность: ${candidate.readinessStatus}
+Совпадение: ${candidate.stackMatch}%
+О себе: ${candidate.about}
     `.trim();
 
     navigator.clipboard.writeText(profileText);
@@ -75,16 +75,16 @@ About: ${candidate.about}
     <section className="space-y-4 pb-12 pt-6">
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold text-neutral-100">
-          Matched Candidates ({filteredCandidates.length})
+          Подходящие кандидаты ({filteredCandidates.length})
         </h2>
       </div>
 
       {filteredCandidates.length === 0 ? (
         <div className="bg-neutral-900 border border-neutral-800 border-dashed rounded-2xl p-12 text-center flex flex-col items-center justify-center">
           <AlertCircle className="w-12 h-12 text-neutral-600 mb-4" />
-          <h3 className="text-lg font-medium text-neutral-300">No candidates found</h3>
+          <h3 className="text-lg font-medium text-neutral-300">Кандидаты не найдены</h3>
           <p className="text-neutral-500 text-sm mt-1">
-            Try adjusting your filters or stack requirements.
+            Попробуйте изменить фильтры или требования к стеку.
           </p>
         </div>
       ) : (
