@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 const navItems = [
   {
     href: "/match",
-    label: "Candidate Match",
+    label: "Поиск кандидатов",
     icon: Users,
   },
   {
     href: "/pipeline",
-    label: "Pipeline",
+    label: "Воронка",
     icon: Kanban,
   },
 ];

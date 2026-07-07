@@ -6,8 +6,8 @@ export default function MatchPage() {
   return (
     <>
       <PageHeader
-        title="Candidate Match"
-        description="Find the perfect candidate for your vacancy instantly."
+        title="Поиск кандидатов"
+        description="Мгновенный поиск идеального кандидата на вашу вакансию."
       />
       <MatchFilters />
       <MatchedCandidates />
